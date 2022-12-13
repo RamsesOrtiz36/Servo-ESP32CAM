@@ -1,0 +1,112 @@
+[
+    {
+        "id": "8411e9aaf88f01d0",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "760cf1fee8c69b10",
+        "type": "comment",
+        "z": "8411e9aaf88f01d0",
+        "name": "Servo control manual",
+        "info": "",
+        "x": 140,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "af91b7b2d0e6b41b",
+        "type": "ui_slider",
+        "z": "8411e9aaf88f01d0",
+        "name": "",
+        "label": "Angulo",
+        "tooltip": "",
+        "group": "1943c113c1b515e9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "c9a51ca96207936c"
+            ]
+        ]
+    },
+    {
+        "id": "c9a51ca96207936c",
+        "type": "mqtt out",
+        "z": "8411e9aaf88f01d0",
+        "name": "",
+        "topic": "codigoIoT/servo",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bcd3ae9b12fd9abf",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1943c113c1b515e9",
+        "type": "ui_group",
+        "name": "Slider",
+        "tab": "a82659eb4f5ff994",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bcd3ae9b12fd9abf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a82659eb4f5ff994",
+        "type": "ui_tab",
+        "name": "Servo tester",
+        "icon": "dashboard",
+        "order": 14,
+        "disabled": false,
+        "hidden": false
+    }
+]
